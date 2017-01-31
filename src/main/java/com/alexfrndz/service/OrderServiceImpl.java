@@ -45,6 +45,11 @@ public class OrderServiceImpl extends AbstractService implements OrderService {
     private Environment env;
 
 
+    /**
+     * Validation are done by spring using javax.validation
+     * @param order
+     * @return
+     */
     @Override
     public SuccessMessageResponse acceptOrder(Order order) {
 

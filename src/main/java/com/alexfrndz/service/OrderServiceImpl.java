@@ -47,6 +47,7 @@ public class OrderServiceImpl extends AbstractService implements OrderService {
 
     /**
      * Validation are done by spring using javax.validation
+     *
      * @param order
      * @return
      */
@@ -61,10 +62,10 @@ public class OrderServiceImpl extends AbstractService implements OrderService {
         try {
             XMLConverterUtils.objectToXML(xmlMarshaller, fileName, order);
         } catch (IOException e) {
-            log.error("Unable to create XML marshaller: ", e);
+            log.error("Unable to create XML from marshaller: ", e);
             throw new IllegalArgumentException("Unable to generate the file {}" + fileName, e);
         }
-        return new SuccessMessageResponse("Ok", "Order accepted.");
+        return new SuccessMessageResponse(0, "Ok", "Order accepted.");
     }
 
     @Override

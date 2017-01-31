@@ -20,8 +20,7 @@ Creating an order
                 "product":"Eggplant",
                 "price":50
             }
-        ]
-}' "http://localhost:9000/api/v1/orders"
+        ]}' "http://localhost:9000/api/v1/orders"
 
 
 Query all the orders
